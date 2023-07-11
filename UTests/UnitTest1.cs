@@ -18,7 +18,7 @@ public class Tests
         const string expectedGreeting = "Hello Buddy";
 
         var loginServiceMock = new Mock<IUserLoginService>();
-        loginServiceMock.Setup(l => l.GreetUser(validName)).Returns(expectedGreeting);
+        loginServiceMock.Setup(mock => mock.GreetUser(validName)).Returns(expectedGreeting);
         var loginService = loginServiceMock.Object;
 
         // Act

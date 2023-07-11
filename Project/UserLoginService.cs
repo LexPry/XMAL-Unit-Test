@@ -11,7 +11,7 @@ public class UserLoginService : IUserLoginService
     public string GreetUser(string userName)
     {
         if (string.IsNullOrEmpty(userName))
-            throw new ArgumentNullException(nameof(userName) + " Should not be null");
+            throw new ArgumentNullException(nameof(userName));
         if (userName.Length == 0)
             throw new ArgumentException("userName cannot be empty");
 
